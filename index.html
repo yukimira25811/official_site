@@ -1,1 +1,94 @@
-"<h1>Hello GitHub Pages</h1>" 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>筋トレアプリ公式サイト</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #fafafa; color: #222; }
+    header {
+      background: #2962FF; color: #fff; padding: 12px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0; z-index: 10;
+    }
+    header h1 { margin: 0; font-size: 20px; font-weight: bold; }
+    nav a {
+      color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500;
+      transition: opacity 0.3s;
+    }
+    nav a:hover { opacity: 0.8; }
+    section { padding: 60px 20px; max-width: 900px; margin: auto; }
+    h2 { border-left: 6px solid #2962FF; padding-left: 10px; color: #2962FF; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 30px; }
+    .card {
+      background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 20px; text-align: center;
+    }
+    .card h3 { margin: 10px 0; color: #2962FF; }
+    .card p { color: #444; font-size: 15px; line-height: 1.6; }
+    footer {
+      background: #222; color: #ccc; text-align: center;
+      padding: 20px; font-size: 14px; margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>筋トレアプリ公式サイト</h1>
+    <nav>
+      <a href="#home">ホーム</a>
+      <a href="#privacy">プライバシー</a>
+      <a href="#help">ヘルプ</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>あなたのトレーニングをサポート</h2>
+    <p>
+      このアプリはフォーム解析、カロリー計算、メニュー提案など、日々の筋トレをより効果的にするための機能を搭載しています。<br>
+      自宅でもジムでも、あなたの成長を科学的にサポートします。
+    </p>
+
+    <div class="features">
+      <div class="card">
+        <h3>フォームチェック機能</h3>
+        <p>AIがあなたの動作を分析し、正しいフォームと改善ポイントをフィードバックします。</p>
+      </div>
+
+      <div class="card">
+        <h3>カロリー計算機能</h3>
+        <p>身長・体重・年齢・運動量を入力するだけで、1日の消費カロリーと摂取目安を自動計算。</p>
+      </div>
+
+      <div class="card">
+        <h3>メニュー提案機能</h3>
+        <p>目的（筋肥大・ダイエットなど）に合わせて、自動で1週間の筋トレプランを提案します。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <h2>プライバシーポリシー</h2>
+    <p>
+      当アプリはユーザーの個人情報を外部に送信せず、端末内で安全に処理されます。<br>
+      入力データやトレーニング履歴はユーザー本人のみが閲覧・削除できます。
+    </p>
+  </section>
+
+  <section id="help">
+    <h2>ヘルプ</h2>
+    <ul>
+      <li>フォームチェック：カメラを許可して正面に立つだけで解析が始まります。</li>
+      <li>カロリー計算：プロフィール入力後、「計算する」を押してください。</li>
+      <li>メニュー提案：目標・頻度を選んで「メニューを生成」ボタンを押します。</li>
+      <li>サポート：お問い合わせは <a href="mailto:support@example.com">support@example.com</a> まで。</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 筋トレアプリ公式サイト | All Rights Reserved
+  </footer>
+
+</body>
+</html>
