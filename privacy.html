@@ -8,9 +8,71 @@
 body { font-family:'Segoe UI',sans-serif; line-height:1.8; margin:40px auto; max-width:800px; padding:0 20px; color:#222; background:#fafafa; }
 h1 { color:#2962FF; border-left:6px solid #2962FF; padding-left:10px; }
 h2 { color:#2962FF; margin-top:40px; }
+/* === サポート・情報（下部リンク） === */
+.info-links {
+  max-width: 900px;
+  margin: 40px auto 0;
+  padding: 28px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.info-links h2 {
+  border: none;
+  color: #2962FF;
+  margin: 0 0 10px;
+}
+.info-links p {
+  color: #444;
+  margin: 0 0 18px;
+}
+
+/* カード風ボタンを等幅グリッドで並べる */
+.info-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+/* ボタンカード */
+.info-actions a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #e6e8ee;
+  background: #f7f9ff;
+  color: #2962FF;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  /* モバイルでタップしやすく */
+  min-height: 44px;
+}
+
+.info-actions a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(41,98,255,0.16);
+  background: #eef3ff;
+}
+
+/* キーボードフォーカスの可視化 */
+.info-actions a:focus {
+  outline: 3px solid rgba(41,98,255,0.4);
+  outline-offset: 2px;
+}
+
+/* ダーク系背景のフッターと距離を少し取る */
+.info-links + footer { margin-top: 28px; }
+
 </style>
 </head>
 <body>
+<header>
+  <h1><a href="index.html"></a>筋トレアプリ公式サイト</a></h1>
+</header>
 <h1>プライバシーポリシー</h1>
 <p>筋トレフォームコーチ（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。</p>
 
@@ -42,6 +104,16 @@ h2 { color:#2962FF; margin-top:40px; }
 <p style="margin-top:40px;">制定日：2025年10月22日<br>
 改定日：2025年10月22日</p>
 
-<p><a href="index.html">← ホームへ戻る</a></p>
+<section class="info-links">
+    <h2>サポート・情報</h2>
+    <p>アプリのご利用に関するお問い合わせやデータの取り扱いについては、以下のページをご覧ください。</p>
+
+    <div class="info-actions">
+      <a href="privacy.html" aria-label="プライバシーポリシー">プライバシーポリシー</a>
+      <a href="terms.html" aria-label="利用規約">利用規約</a>
+      <a href="contact.html" aria-label="お問い合わせ">お問い合わせ</a>
+    </div>
+  </section>
+
 </body>
 </html>
