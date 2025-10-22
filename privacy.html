@@ -3,117 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>プライバシーポリシー | 筋トレフォームコーチ</title>
+<title>プライバシーポリシー | 筋トレアプリ公式サイト</title>
 <style>
-body { font-family:'Segoe UI',sans-serif; line-height:1.8; margin:40px auto; max-width:800px; padding:0 20px; color:#222; background:#fafafa; }
-h1 { color:#2962FF; border-left:6px solid #2962FF; padding-left:10px; }
-h2 { color:#2962FF; margin-top:40px; }
-/* === サポート・情報（下部リンク） === */
-.info-links {
-  max-width: 900px;
-  margin: 40px auto 0;
-  padding: 28px 20px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  text-align: center;
-}
-.info-links h2 {
-  border: none;
-  color: #2962FF;
-  margin: 0 0 10px;
-}
-.info-links p {
-  color: #444;
-  margin: 0 0 18px;
-}
+  /* ベース */
+  body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #fafafa; color: #222; }
 
-/* カード風ボタンを等幅グリッドで並べる */
-.info-actions {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
-}
+  /* ヘッダー（indexと同じ） */
+  header {
+    background: #2962FF; color: #fff; padding: 12px 20px;
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 10;
+  }
+  header h1 { margin: 0; font-size: 20px; font-weight: bold; }
+  header h1 a { color: #fff; text-decoration: none; }
+  header h1 a:hover { opacity: 0.85; }
 
-/* ボタンカード */
-.info-actions a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 14px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  border: 1px solid #e6e8ee;
-  background: #f7f9ff;
-  color: #2962FF;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  /* モバイルでタップしやすく */
-  min-height: 44px;
-}
+  /* セクション／見出し（indexと同じトーン） */
+  section { padding: 60px 20px; max-width: 900px; margin: auto; }
+  h2 { border-left: 6px solid #2962FF; padding-left: 10px; color: #2962FF; }
 
-.info-actions a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(41,98,255,0.16);
-  background: #eef3ff;
-}
+  /* ページ内の先頭大見出し */
+  .page-title {
+    color:#2962FF; border-left:6px solid #2962FF; padding-left:10px; margin-top:0;
+  }
 
-/* キーボードフォーカスの可視化 */
-.info-actions a:focus {
-  outline: 3px solid rgba(41,98,255,0.4);
-  outline-offset: 2px;
-}
+  /* フッター（共通） */
+  footer {
+    background: #222; color: #ccc; text-align: center;
+    padding: 20px; font-size: 14px; margin-top: 60px;
+  }
 
-/* ダーク系背景のフッターと距離を少し取る */
-.info-links + footer { margin-top: 28px; }
+  /* === サポート・情報（下部リンク） === */
+  .info-links {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 28px 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-align: center;
+  }
+  .info-links h2 {
+    border: none;
+    color: #2962FF;
+    margin: 0 0 10px;
+  }
+  .info-links p {
+    color: #444;
+    margin: 0 0 18px;
+  }
 
+  /* カード風ボタンを等幅グリッドで並べる */
+  .info-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+
+  /* ボタンカード */
+  .info-actions a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #e6e8ee;
+    background: #f7f9ff;
+    color: #2962FF;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    min-height: 44px; /* タップしやすく */
+  }
+  .info-actions a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(41,98,255,0.16);
+    background: #eef3ff;
+  }
+  .info-actions a:focus {
+    outline: 3px solid rgba(41,98,255,0.4);
+    outline-offset: 2px;
+  }
+
+  /* フッターとの間隔 */
+  .info-links + footer { margin-top: 28px; }
 </style>
 </head>
 <body>
-<header>
-  <h1><a href="index.html"></a>筋トレアプリ公式サイト</a></h1>
-</header>
-<h1>プライバシーポリシー</h1>
-<p>筋トレフォームコーチ（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。</p>
 
-<h2>1. 収集する情報</h2>
-<ul>
-<li>カメラ映像：フォーム解析のために端末のカメラを使用しますが、映像データは端末内のみで処理され、外部サーバーに送信・保存されることはありません。</li>
-<li>利用ログ：クラッシュレポートやアプリの利用状況（匿名化された統計情報）のみを収集する場合があります。</li>
-</ul>
+  <!-- 共通ヘッダー -->
+  <header>
+    <h1><a href="index.html">筋トレアプリ公式サイト</a></h1>
+  </header>
 
-<h2>2. 利用目的</h2>
-<p>収集した情報は以下の目的のみに使用します：</p>
-<ul>
-<li>フォーム検出や姿勢判定などの機能提供</li>
-<li>品質向上や不具合修正のための分析</li>
-</ul>
+  <!-- 本文 -->
+  <section>
+    <h1 class="page-title">プライバシーポリシー</h1>
+    <p>筋トレフォームコーチ（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。</p>
 
-<h2>3. 第三者提供</h2>
-<p>個人を特定できる情報を第三者へ提供することはありません。</p>
+    <h2>1. 収集する情報</h2>
+    <ul>
+      <li>カメラ映像：フォーム解析のために端末のカメラを使用しますが、映像データは端末内のみで処理され、外部サーバーに送信・保存されることはありません。</li>
+      <li>利用ログ：クラッシュレポートやアプリの利用状況（匿名化された統計情報）のみを収集する場合があります。</li>
+    </ul>
 
-<h2>4. 安全管理</h2>
-<p>端末内で処理されるデータは、アプリが終了すると同時に破棄されます。</p>
+    <h2>2. 利用目的</h2>
+    <p>収集した情報は以下の目的のみに使用します：</p>
+    <ul>
+      <li>フォーム検出や姿勢判定などの機能提供</li>
+      <li>品質向上や不具合修正のための分析</li>
+    </ul>
 
-<h2>5. お問い合わせ</h2>
-<p>プライバシーに関するご質問は<a href="contact.html">お問い合わせフォーム</a>からご連絡ください。</p>
+    <h2>3. 第三者提供</h2>
+    <p>個人を特定できる情報を第三者へ提供することはありません。</p>
 
-<h2>6. 改訂</h2>
-<p>本ポリシーは必要に応じて改訂することがあります。最新の内容は本ページで告知します。</p>
+    <h2>4. 安全管理</h2>
+    <p>端末内で処理されるデータは、アプリが終了すると同時に破棄されます。</p>
 
-<p style="margin-top:40px;">制定日：2025年10月22日<br>
-改定日：2025年10月22日</p>
+    <h2>5. お問い合わせ</h2>
+    <p>プライバシーに関するご質問は<a href="contact.html">お問い合わせフォーム</a>からご連絡ください。</p>
 
-<section class="info-links">
+    <h2>6. 改訂</h2>
+    <p>本ポリシーは必要に応じて改訂することがあります。最新の内容は本ページで告知します。</p>
+
+    <p style="margin-top:40px;">制定日：2025年10月22日<br>
+    改定日：2025年10月22日</p>
+  </section>
+
+  <!-- 下部リンク（indexと同じレイアウト） -->
+  <section class="info-links">
     <h2>サポート・情報</h2>
     <p>アプリのご利用に関するお問い合わせやデータの取り扱いについては、以下のページをご覧ください。</p>
-
     <div class="info-actions">
       <a href="privacy.html" aria-label="プライバシーポリシー">プライバシーポリシー</a>
       <a href="terms.html" aria-label="利用規約">利用規約</a>
       <a href="contact.html" aria-label="お問い合わせ">お問い合わせ</a>
     </div>
   </section>
+
+  <!-- 共通フッター -->
+  <footer>
+    © 2025 筋トレアプリ公式サイト | All Rights Reserved
+  </footer>
 
 </body>
 </html>
