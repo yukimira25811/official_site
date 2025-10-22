@@ -5,123 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>利用規約 | 筋トレフォームコーチ</title>
 <style>
-body { font-family:'Segoe UI',sans-serif; line-height:1.8; margin:40px auto; max-width:800px; padding:0 20px; color:#222; background:#fafafa; }
+  /* ベース */
+  body { margin:0; font-family:'Segoe UI',sans-serif; background:#fafafa; color:#222; line-height:1.8; }
 
-header {
-    background: #2962FF; color: #fff; padding: 12px 20px;
-    display: flex; justify-content: space-between; align-items: center;
-    position: sticky; top: 0; z-index: 10;
+  /* 共通ヘッダー（タイトル=ホームリンク） */
+  header {
+    background:#2962FF; color:#fff; padding:12px 20px;
+    display:flex; justify-content:space-between; align-items:center;
+    position:sticky; top:0; z-index:10;
   }
-  header h1 { margin: 0; font-size: 20px; font-weight: bold; }
-  header h1 a { color: #fff; text-decoration: none; }
-  header h1 a:hover { opacity: 0.85; }
-footer {
-    background: #222; color: #ccc; text-align: center;
-    padding: 20px; font-size: 14px; margin-top: 60px;
+  header h1 { margin:0; font-size:20px; font-weight:bold; }
+  header h1 a { color:#fff; text-decoration:none; }
+  header h1 a:hover { opacity:0.85; }
+
+  /* 本文コンテナ */
+  section { padding:60px 20px; max-width:900px; margin:auto; }
+  .page-title {
+    color:#2962FF; border-left:6px solid #2962FF; padding-left:10px; margin-top:0;
   }
-h1 { color:#2962FF; border-left:6px solid #2962FF; padding-left:10px; }
-h2 { color:#2962FF; margin-top:40px; }
-/* === サポート・情報（下部リンク） === */
-.info-links {
-  max-width: 900px;
-  margin: 40px auto 0;
-  padding: 28px 20px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  text-align: center;
-}
-.info-links h2 {
-  border: none;
-  color: #2962FF;
-  margin: 0 0 10px;
-}
-.info-links p {
-  color: #444;
-  margin: 0 0 18px;
-}
+  h2 { color:#2962FF; margin-top:40px; border-left:6px solid #2962FF; padding-left:10px; }
 
-/* カード風ボタンを等幅グリッドで並べる */
-.info-actions {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
-}
+  /* 下部リンク（サポート・情報） */
+  .info-links {
+    max-width:900px; margin:40px auto 0; padding:28px 20px;
+    background:#fff; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.08); text-align:center;
+  }
+  .info-links h2 { border:none; color:#2962FF; margin:0 0 10px; }
+  .info-links p { color:#444; margin:0 0 18px; }
+  .info-actions {
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:12px;
+  }
+  .info-actions a {
+    display:flex; align-items:center; justify-content:center;
+    padding:12px 14px; border-radius:10px; text-decoration:none; font-weight:600;
+    border:1px solid #e6e8ee; background:#f7f9ff; color:#2962FF;
+    transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    min-height:10px;
+  }
+  .info-actions a:hover { transform:translateY(-2px); box-shadow:0 6px 16px rgba(41,98,255,0.16); background:#eef3ff; }
+  .info-actions a:focus { outline:3px solid rgba(41,98,255,0.4); outline-offset:2px; }
+  .info-links + footer { margin-top:28px; }
 
-/* ボタンカード */
-.info-actions a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 14px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  border: 1px solid #e6e8ee;
-  background: #f7f9ff;
-  color: #2962FF;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  /* モバイルでタップしやすく */
-  min-height: 44px;
-}
-
-.info-actions a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(41,98,255,0.16);
-  background: #eef3ff;
-}
-
-/* キーボードフォーカスの可視化 */
-.info-actions a:focus {
-  outline: 3px solid rgba(41,98,255,0.4);
-  outline-offset: 2px;
-}
-
-/* ダーク系背景のフッターと距離を少し取る */
-.info-links + footer { margin-top: 28px; }
-
+  /* フッター */
+  footer {
+    background:#222; color:#ccc; text-align:center;
+    padding:20px; font-size:14px; margin-top:60px;
+  }
 </style>
 </head>
 <body>
-<header>
-  <h1><a href="index.html"></a>筋トレアプリ公式サイト</a></h1>
-</header>
-<h1>利用規約</h1>
-<p>この利用規約（以下「本規約」）は、「筋トレフォームコーチ」（以下「本アプリ」）の利用条件を定めるものです。ユーザーは本アプリを利用することにより、本規約に同意したものとみなします。</p>
 
-<h2>1. 禁止事項</h2>
-<ul>
-<li>本アプリを不正な目的で使用する行為</li>
-<li>第三者の権利を侵害する行為</li>
-<li>アプリのリバースエンジニアリングや解析行為</li>
-</ul>
+  <!-- 共通ヘッダー -->
+  <header>
+    <h1><a href="index.html">筋トレアプリ公式サイト</a></h1>
+  </header>
 
-<h2>2. 免責事項</h2>
-<p>本アプリの利用により生じた損害について、開発者は一切の責任を負いません。フォーム解析結果や運動アドバイスはあくまで目安であり、健康状態に応じて医師や専門家の助言を受けてください。</p>
+  <!-- 本文 -->
+  <section>
+    <h1 class="page-title">利用規約</h1>
+    <p>この利用規約（以下「本規約」）は、「筋トレフォームコーチ」（以下「本アプリ」）の利用条件を定めるものです。ユーザーは本アプリを利用することにより、本規約に同意したものとみなします。</p>
 
-<h2>3. 知的財産権</h2>
-<p>本アプリおよび本サイトに関する著作権・商標権等の知的財産権は、開発者に帰属します。</p>
+    <h2>1. 禁止事項</h2>
+    <ul>
+      <li>本アプリを不正な目的で使用する行為</li>
+      <li>第三者の権利を侵害する行為</li>
+      <li>アプリのリバースエンジニアリングや解析行為</li>
+    </ul>
 
-<h2>4. 利用停止・変更</h2>
-<p>開発者は予告なく本アプリの内容を変更または提供を中止することがあります。</p>
+    <h2>2. 免責事項</h2>
+    <p>本アプリの利用により生じた損害について、開発者は一切の責任を負いません。フォーム解析結果や運動アドバイスはあくまで目安であり、健康状態に応じて医師や専門家の助言を受けてください。</p>
 
-<h2>5. 準拠法</h2>
-<p>本規約は日本法を準拠法とし、日本国内の法令に従って解釈されます。</p>
+    <h2>3. 知的財産権</h2>
+    <p>本アプリおよび本サイトに関する著作権・商標権等の知的財産権は、開発者に帰属します。</p>
 
-<p style="margin-top:40px;">制定日：2025年10月22日</p>
+    <h2>4. 利用停止・変更</h2>
+    <p>開発者は予告なく本アプリの内容を変更または提供を中止することがあります。</p>
 
-<section class="info-links">
+    <h2>5. 準拠法</h2>
+    <p>本規約は日本法を準拠法とし、日本国内の法令に従って解釈されます。</p>
+
+    <p style="margin-top:40px;">制定日：2025年10月22日</p>
+  </section>
+
+  <!-- 下部リンク（サポート・情報） -->
+  <section class="info-links">
     <h2>サポート・情報</h2>
     <p>アプリのご利用に関するお問い合わせやデータの取り扱いについては、以下のページをご覧ください。</p>
-
     <div class="info-actions">
       <a href="privacy.html" aria-label="プライバシーポリシー">プライバシーポリシー</a>
       <a href="terms.html" aria-label="利用規約">利用規約</a>
       <a href="contact.html" aria-label="お問い合わせ">お問い合わせ</a>
     </div>
   </section>
+
+  <!-- 共通フッター -->
   <footer>
     © 2025 筋トレアプリ公式サイト | All Rights Reserved
   </footer>
+
 </body>
 </html>

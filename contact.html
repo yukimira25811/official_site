@@ -5,116 +5,97 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>お問い合わせ | 筋トレフォームコーチ</title>
 <style>
-body { font-family:'Segoe UI',sans-serif; background:#fafafa; color:#222; line-height:1.6; margin:40px auto; max-width:700px; padding:0 20px; }
-h1 { color:#2962FF; border-left:6px solid #2962FF; padding-left:10px; }
-header {
-    background: #2962FF; color: #fff; padding: 12px 20px;
-    display: flex; justify-content: space-between; align-items: center;
-    position: sticky; top: 0; z-index: 10;
+  /* ベース */
+  body { margin:0; font-family:'Segoe UI',sans-serif; background:#fafafa; color:#222; line-height:1.6; }
+
+  /* 共通ヘッダー（タイトル=ホームリンク） */
+  header {
+    background:#2962FF; color:#fff; padding:12px 20px;
+    display:flex; justify-content:space-between; align-items:center;
+    position:sticky; top:0; z-index:10;
   }
-header h1 { margin: 0; font-size: 20px; font-weight: bold; }
-header h1 a { color: #fff; text-decoration: none; }
-header h1 a:hover { opacity: 0.85; }
-footer {
-    background: #222; color: #ccc; text-align: center;
-    padding: 20px; font-size: 14px; margin-top: 60px;
+  header h1 { margin:0; font-size:20px; font-weight:bold; }
+  header h1 a { color:#fff; text-decoration:none; }
+  header h1 a:hover { opacity:0.85; }
+
+  /* コンテンツセクション */
+  section { padding:60px 20px; max-width:900px; margin:auto; }
+  .page-title {
+    color:#2962FF; border-left:6px solid #2962FF; padding-left:10px; margin-top:0;
   }
-form { background:#fff; padding:24px; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,0.08); }
-label { display:block; margin-top:14px; font-weight:600; }
-input, textarea {
-  width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; font-size:15px;
-}
-button {
-  margin-top:20px; background:#2962FF; color:#fff; border:none;
-  padding:10px 18px; border-radius:6px; font-size:16px; cursor:pointer;
-}
-button:hover { background:#0039cb; }
-/* === サポート・情報（下部リンク） === */
-.info-links {
-  max-width: 900px;
-  margin: 40px auto 0;
-  padding: 28px 20px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  text-align: center;
-}
-.info-links h2 {
-  border: none;
-  color: #2962FF;
-  margin: 0 0 10px;
-}
-.info-links p {
-  color: #444;
-  margin: 0 0 18px;
-}
 
-/* カード風ボタンを等幅グリッドで並べる */
-.info-actions {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
-}
+  /* フォーム */
+  form { background:#fff; padding:24px; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,0.08); }
+  label { display:block; margin-top:14px; font-weight:600; }
+  input, textarea {
+    width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; font-size:15px;
+  }
+  button {
+    margin-top:20px; background:#2962FF; color:#fff; border:none;
+    padding:10px 18px; border-radius:6px; font-size:16px; cursor:pointer;
+  }
+  button:hover { background:#0039cb; }
 
-/* ボタンカード */
-.info-actions a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 14px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  border: 1px solid #e6e8ee;
-  background: #f7f9ff;
-  color: #2962FF;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  /* モバイルでタップしやすく */
-  min-height: 44px;
-}
+  /* 下部リンク（サポート・情報） */
+  .info-links {
+    max-width:900px; margin:40px auto 0; padding:28px 20px;
+    background:#fff; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.08); text-align:center;
+  }
+  .info-links h2 { border:none; color:#2962FF; margin:0 0 10px; }
+  .info-links p { color:#444; margin:0 0 18px; }
+  .info-actions {
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:12px;
+  }
+  .info-actions a {
+    display:flex; align-items:center; justify-content:center;
+    padding:12px 14px; border-radius:10px; text-decoration:none; font-weight:600;
+    border:1px solid #e6e8ee; background:#f7f9ff; color:#2962FF;
+    transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    min-height:10px;
+  }
+  .info-actions a:hover { transform:translateY(-2px); box-shadow:0 6px 16px rgba(41,98,255,0.16); background:#eef3ff; }
+  .info-actions a:focus { outline:3px solid rgba(41,98,255,0.4); outline-offset:2px; }
+  .info-links + footer { margin-top:28px; }
 
-.info-actions a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(41,98,255,0.16);
-  background: #eef3ff;
-}
-
-/* キーボードフォーカスの可視化 */
-.info-actions a:focus {
-  outline: 3px solid rgba(41,98,255,0.4);
-  outline-offset: 2px;
-}
-
-/* ダーク系背景のフッターと距離を少し取る */
-.info-links + footer { margin-top: 28px; }
-
+  /* フッター */
+  footer {
+    background:#222; color:#ccc; text-align:center;
+    padding:20px; font-size:14px; margin-top:60px;
+  }
 </style>
 </head>
 <body>
-<header>
-  <h1><a href="index.html"></a>筋トレアプリ公式サイト</a></h1>
-</header>
 
-<h1>お問い合わせ</h1>
-<p>アプリに関するご質問・不具合報告・ご意見などは、以下のフォームからご連絡ください。</p>
+  <!-- 共通ヘッダー -->
+  <header>
+    <h1><a href="index.html">筋トレアプリ公式サイト</a></h1>
+  </header>
 
-<form action="https://formspree.io/f/xgvnjwyb" method="POST">
-  <label>お名前</label>
-  <input type="text" name="name" required>
+  <!-- 本文 -->
+  <section>
+    <h1 class="page-title">お問い合わせ</h1>
+    <p>アプリに関するご質問・不具合報告・ご意見などは、以下のフォームからご連絡ください。</p>
 
-  <label>メールアドレス</label>
-  <input type="email" name="email" required>
+    <!-- Formspree: フォームIDはそのまま使用 -->
+    <form action="https://formspree.io/f/xgvnjwyb" method="POST">
+      <label>お名前</label>
+      <input type="text" name="name" required>
 
-  <label>お問い合わせ内容</label>
-  <textarea name="message" rows="6" required></textarea>
+      <label>メールアドレス</label>
+      <!-- 返信先として扱いたい場合は name="_replyto" にしてもOK -->
+      <input type="email" name="email" required>
 
-  <button type="submit">送信する</button>
-</form>
+      <label>お問い合わせ内容</label>
+      <textarea name="message" rows="6" required></textarea>
 
-<section class="info-links">
+      <button type="submit">送信する</button>
+    </form>
+  </section>
+
+  <!-- 下部リンク -->
+  <section class="info-links">
     <h2>サポート・情報</h2>
     <p>アプリのご利用に関するお問い合わせやデータの取り扱いについては、以下のページをご覧ください。</p>
-
     <div class="info-actions">
       <a href="privacy.html" aria-label="プライバシーポリシー">プライバシーポリシー</a>
       <a href="terms.html" aria-label="利用規約">利用規約</a>
@@ -122,8 +103,10 @@ button:hover { background:#0039cb; }
     </div>
   </section>
 
+  <!-- 共通フッター -->
   <footer>
     © 2025 筋トレアプリ公式サイト | All Rights Reserved
   </footer>
+
 </body>
 </html>
